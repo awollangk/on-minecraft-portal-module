@@ -266,7 +266,7 @@ class portal_on_minecraft_module
             $key  = $this->get_url_key($module_id);
 
             $this->curl_url = sprintf(
-                'http://%s:%s/call?method=getPlayers&args=%5B%5D&key=%s',
+                'http://%s:%s/call?method=getPlayers&args=%%5B%%5D&key=%s',
                 $this->get_server_url($module_id),
                 $this->get_sb_port($module_id),
                 $this->get_url_key($module_id)
@@ -314,11 +314,13 @@ class portal_on_minecraft_module
         $player_field = $this->get_player_field($module_id);
         $login_field  = $this->get_login_field($module_id);
         $online_time  = $this->get_online_time($module_id);
-        $select       = "p.$player_field AS playername, p.$login_field AS lastlogin"
-                      . ($this->get_show_total($module_id))
-                        ? ", p.$online_time AS onlinetime"
-                        : '';
+        $select       = "p.$player_field AS playername, p.$login_field AS lastlogin";
         $order_by     = "p.$login_field DESC";
+
+        if( $this->get_show_total($module_id) )
+        {
+            $select .= ", p.$online_time AS onlinetime";
+        }
 
         $sql = $db->sql_build_query('SELECT_DISTINCT', array(
             'SELECT'   => $select,
@@ -387,11 +389,15 @@ class portal_on_minecraft_module
 
         foreach( $recent as $user )
         {
-            $template->assign_block_vars('b3p_on_minecraft_recent_users', array(
+            $args = array(
                 'USERNAME' => $user['playername'],
                 'TIME'     => empty($date_fmt) ? '' : date( $date_fmt, strtotime( $user['lastlogin'] ) ),
-                'TOTAL'    => $this->total_time($user['onlinetime']),
-            ));
+            );
+            if( $this->get_show_total($module_id) )
+            {
+                $args['TOTAL'] = $this->total_time($user['onlinetime']);
+            }
+            $template->assign_block_vars('b3p_on_minecraft_recent_users', $args);
         }
 
         $template->assign_vars(array(
