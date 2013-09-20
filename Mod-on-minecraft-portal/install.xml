@@ -49,7 +49,21 @@ Without SpaceBukkit this mod would not be able to bring up the current users whi
 		<history>
 			<entry>
 				<date>2013-09-20</date>
+				<rev-version>1.0.2</rev-version>
+				<changelog lang="en">
+					<change>Fixed Template Logic</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-09-20</date>
 				<rev-version>1.0.1</rev-version>
+				<changelog lang="en">
+					<change>Added GitHub URL to Install</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-09-20</date>
+				<rev-version>1.0.0</rev-version>
 				<changelog lang="en">
 					<change>Initial Release</change>
 				</changelog>
@@ -69,5 +83,9 @@ Without SpaceBukkit this mod would not be able to bring up the current users whi
 		</copy>
 	</action-group>
 
-	<diy-instructions>After this mod is installed </diy-instructions>
+	<diy-instructions>
+After this mod is installed it can be added to the display from the Administration Control Panel (CPL) in the ".MODS" tab "Portal Modules" link under the "PORTAL" heading.  Simply click the "Add module" button in the section you want the "Who's On Minecraft" portal to show up in and select "Who's On Minecraft" from the drop down list that appears.
+
+Once the portal is added to the page it needs to be configured.  Click on the green gear in the box of the "Portal Modules" page representing the "Who's On Minecraft" portal.  The defaults are fairly reasonable for most settings but there is no way to put in the URL Key value into settings automatically.
+	</diy-instructions>
 </mod>
