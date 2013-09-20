@@ -24,6 +24,8 @@ LogBlock (http://dev.bukkit.org/bukkit-plugins/logblock/) - Provides logging ser
 Without SpaceBukkit this mod would not be able to bring up the current users which would defeat the primary purpose of this plugin.  This mod can run just fine without LogBlock and if there is another plugin installed that stores usernames and last login times this plugin can be configured to pull its values from that database instead.
 		</description>
 
+		<github>https://github.com/awollangk/on-minecraft-portal-module</github>
+
 		<author-group>
 			<author>
 				<realname>Alex Wollangk</realname>
