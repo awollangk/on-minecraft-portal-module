@@ -49,6 +49,13 @@ Without SpaceBukkit this mod would not be able to bring up the current users whi
 		<history>
 			<entry>
 				<date>2013-09-20</date>
+				<rev-version>1.0.3</rev-version>
+				<changelog lang="en">
+					<change>Updated This Install File</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-09-20</date>
 				<rev-version>1.0.2</rev-version>
 				<changelog lang="en">
 					<change>Fixed Template Logic</change>
