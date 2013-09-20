@@ -38,7 +38,7 @@ Without SpaceBukkit this mod would not be able to bring up the current users whi
 			<link type="dependency" href="" lang="en"></link>
 		</link-group>
 
-		<mod-version>1.0.0</mod-version>
+		<mod-version>1.0.3</mod-version>
 		
 		<installation>
 			<level>intermediate</level>
