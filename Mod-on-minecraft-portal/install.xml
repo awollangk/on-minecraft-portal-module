@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: https
+://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at https://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.phpbb.com/mods/xml/modx-1.2.6.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+		
+		<title lang="en">On Minecraft Portal Module</title>
+		
+		<description lang="en">This modification will provide an additional module for Board III Portal (http://www.board3.de/) to display the users currently logged into your Minecraft server. This Modification requires Board III Portal version 2.0.1.</description>
+
+		<author-group>
+			<author>
+				<realname>Alex Wollangk</realname>
+				<username>awollangk</username>
+				<email>awollangk@gmail.com</email>
+			</author>
+		</author-group>
+
+		<link-group>
+			<link type="dependency" href="" lang="en"></link>
+		</link-group>
+
+		<mod-version>1.0.0</mod-version>
+		
+		<installation>
+			<level>intermediate</level>
+			<time>300</time>
+			<target-version>3.0.11</target-version>
+		</installation>
+
+		<history>
+			<entry>
+				<date>2013-09-20</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change>Initial Release</change>
+				</changelog>
+			</entry>
+		</history>
+
+	</header>
+
+	<action-group>
+		<copy>
+			<file from="root/language/en/mods/portal/portal_on_minecraft_module.php" to="language/en/mods/portal/portal_on_minecraft_module.php" />
+			<file from="root/portal/modules/portal_on_minecraft.php" to="portal/modules/portal_on_minecraft.php" />
+			<file from="root/styles/prosilver/template/portal/modules/portal_on_minecraft_center.html" to="styles/prosilver/template/portal/modules/portal_on_minecraft_center.html" />
+			<file from="root/styles/prosilver/template/portal/modules/portal_on_minecraft_side.html" to="styles/prosilver/template/portal/modules/portal_on_minecraft_side.html" />
+			<file from="root/styles/subsilver2/template/portal/modules/portal_on_minecraft_center.html" to="styles/subsilver2/template/portal/modules/portal_on_minecraft_center.html" />
+			<file from="root/styles/subsilver2/template/portal/modules/portal_on_minecraft_side.html" to="styles/subsilver2/template/portal/modules/portal_on_minecraft_side.html" />
+		</copy>
+	</action-group>
+
+	<diy-instructions>After this mod is installed </diy-instructions>
+</mod>

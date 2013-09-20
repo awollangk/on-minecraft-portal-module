@@ -1,0 +1,28 @@
+{$C_BLOCK_H_L}{$TITLE}{$C_BLOCK_H_R}
+<div class="panel bg1" style="margin-bottom: 0px">
+    <div class="inner"><span class="portal-corners-top-inner"></span>
+        <div class="postbody" style="width: 100%">
+            <div class="content" style="min-height: 1em;">
+                <strong>Current</strong>
+                <ul class="current-users">
+                    <!-- IF HAS_CONNECTION -->
+                    <!-- BEGIN b3p_on_minecraft_current_users -->
+                    <li><!-- IF SHOW_AVATAR --><img alt="{b3p_on_minecraft_current_users.USERNAME}" class="on-minecraft-avatar" height="{AVATAR_SIZE}" src="/face.php?s={AVATAR_SIZE}&u={b3p_on_minecraft_current_users.USERNAME}" width="{AVATAR_SIZE}" /><!-- ENDIF --><span class="on-minecraft-player">{b3p_on_minecraft_current_users.USERNAME}</span></li>
+                    <!-- BEGINELSE -->
+                    <li>{LONELY}</li>
+                    <!-- END b3p_on_minecraft_current_users -->
+                    <!-- BEGINELSE -->
+                    <li>{L_ON_MINECRAFT_NO_SERVER_CONNECTION}</li>
+                    <!-- ENDIF -->
+                </ul><!-- IF HAVE_RECENT -->
+                <strong>Recent</strong>
+                <ul class="recent-users">
+                    <!-- BEGIN b3p_on_minecraft_recent_users -->
+                    <li><!-- IF SHOW_AVATAR --><img alt="{b3p_on_minecraft_recent_users.USERNAME}" class="on-minecraft-avatar" height="{AVATAR_SIZE}" src="/face.php?s={AVATAR_SIZE}&u={b3p_on_minecraft_recent_users.USERNAME}" width="{AVATAR_SIZE}" /><!-- ENDIF --><!-- IF SHOW_TIME --><span class="on-minecraft-time">{b3p_on_minecraft_recent_users.TIME}</span><!-- ENDIF --><span class="on-minecraft-player">{b3p_on_minecraft_recent_users.USERNAME}</span><!-- IF SHOW_TOTAL --><span class="on-minecraft-total">({b3p_on_minecraft_recent_users.TOTAL})</span><!-- ENDIF --></li>
+                    <!-- END b3p_on_minecraft_recent_users -->
+                </ul><!-- ENDIF -->
+            </div>
+        </div>
+        <span class="portal-corners-bottom-inner"></span></div>
+</div>
+{$C_BLOCK_F_L}{$C_BLOCK_F_R}
