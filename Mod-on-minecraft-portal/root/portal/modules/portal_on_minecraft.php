@@ -181,7 +181,7 @@ class portal_on_minecraft_module
      */
     private function get_table_name($module_id)
     {
-        return strval($this->get_module_config($module_id, 'table_name'));
+        return $this->sql_escape(strval($this->get_module_config($module_id, 'table_name')));
     }
 
     /**
@@ -191,7 +191,7 @@ class portal_on_minecraft_module
      */
     private function get_player_field($module_id)
     {
-        return strval($this->get_module_config($module_id, 'player_field'));
+        return $this->sql_escape(strval($this->get_module_config($module_id, 'player_field')));
     }
 
     /**
@@ -202,7 +202,7 @@ class portal_on_minecraft_module
      */
     private function get_login_field($module_id)
     {
-        return strval($this->get_module_config($module_id, 'login_field'));
+        return $this->sql_escape(strval($this->get_module_config($module_id, 'login_field')));
     }
 
     /**
@@ -214,7 +214,7 @@ class portal_on_minecraft_module
      */
     private function get_online_time($module_id)
     {
-        return strval($this->get_module_config($module_id, 'online_time'));
+        return $this->sql_escape(strval($this->get_module_config($module_id, 'online_time')));
     }
 
     /**
@@ -252,6 +252,19 @@ class portal_on_minecraft_module
     /******************
      * Helper Methods *
      ******************/
+
+	/**
+	 * Wrapper for the database method sql_escape to avoid including the
+	 * global $db in more methods than necessary.
+	 * @param  string $sql_string The string to escape
+	 * @return string The same string with values escaped to avoid SQL
+	 * injection.
+	 */
+	private function sql_escape($sql_string)
+	{
+		global $db;
+		return $db->sql_escape($sql_string);
+	}
 
     /**
      * @param  mixed  $module_id The ID of the current instance of this module.

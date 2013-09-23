@@ -88,11 +88,11 @@ Without SpaceBukkit this mod would not be able to bring up the current users whi
 			<file from="root/styles/subsilver2/template/portal/modules/portal_on_minecraft_center.html" to="styles/subsilver2/template/portal/modules/portal_on_minecraft_center.html" />
 			<file from="root/styles/subsilver2/template/portal/modules/portal_on_minecraft_side.html" to="styles/subsilver2/template/portal/modules/portal_on_minecraft_side.html" />
 		</copy>
-	</action-group>
-
-	<diy-instructions>
+		<diy-instructions lang="en">
 After this mod is installed it can be added to the display from the Administration Control Panel (CPL) in the ".MODS" tab "Portal Modules" link under the "PORTAL" heading.  Simply click the "Add module" button in the section you want the "Who's On Minecraft" portal to show up in and select "Who's On Minecraft" from the drop down list that appears.
 
 Once the portal is added to the page it needs to be configured.  Click on the green gear in the box of the "Portal Modules" page representing the "Who's On Minecraft" portal.  The defaults are fairly reasonable for most settings but there is no way to put in the URL Key value into settings automatically.
-	</diy-instructions>
+		</diy-instructions>
+	</action-group>
+
 </mod>
